@@ -1,4 +1,4 @@
 {
-    message: @price
+    name: @price.name
 }
 ]

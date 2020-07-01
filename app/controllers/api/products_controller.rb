@@ -1,7 +1,7 @@
 class Api::ProductsController < ApplicationController
 
     def name
-        @name = Product.rand
+        @name = Product.name
         
 
         render 'name_information.json.jb'
