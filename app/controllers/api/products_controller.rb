@@ -1,27 +1,10 @@
 class Api::ProductsController < ApplicationController
 
-    def name
-        @name = Product.name
-        
+    def index
+    @product = Product.all
 
-        render 'name_information.json.jb'
-    end
+    render 'index.json.jb'
+end
 
-    # def price
-    #     @price = Product[0]["price"]
-
-    #     render 'price_information.json.jb'
-    # end
-
-    # def image_url
-    #     @image_url = Product[0]["image_url"]
-
-    #     render 'image_url_information.json.jb'
-    # end
-
-    # def description
-    #     @description = Product[0]["description"]
-
-    #     render 'description_information.json.jb'
-    # end
+    
 end

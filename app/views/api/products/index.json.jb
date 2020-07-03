@@ -1,0 +1,6 @@
+    @product.map do |products|
+{
+   name: @product.name
+   
+}
+end
