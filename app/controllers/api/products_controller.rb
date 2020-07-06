@@ -26,5 +26,6 @@ class Api::ProductsController < ApplicationController
   @product.description = params[:description]
   @product.price = params[:price]
   @product.save
+  render 'show.json.jb'
  end
 end
