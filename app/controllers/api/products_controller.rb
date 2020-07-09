@@ -17,7 +17,6 @@ class Api::ProductsController < ApplicationController
     price: params[:price],
   )
 
-  
   if @product.save
   render 'show.json.jb'
   else
@@ -29,7 +28,10 @@ class Api::ProductsController < ApplicationController
   @product.name = params[:name]
   @product.description = params[:description]
   @product.price = params[:price]
-  @product.save
+  
+  if @product.save
+    render 'show.json.jb'
+  else 
   render 'show.json.jb'
  end
 
