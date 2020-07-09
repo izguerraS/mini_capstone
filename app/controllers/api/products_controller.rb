@@ -16,9 +16,13 @@ class Api::ProductsController < ApplicationController
     description: params[:description],
     price: params[:price],
   )
-  @product.save
+
+  
+  if @product.save
   render 'show.json.jb'
- end
+  else
+    render json: {errors: @product.errors.full_messages}, status: :unprocessable_entity
+  end
 
  def update
   @product = Product.find_by(id: params[:id])
@@ -33,5 +37,6 @@ class Api::ProductsController < ApplicationController
   @product = Product.find_by(id: params[:id])
   @product.destroy
   render 'destroy.json.jb'
+ end
  end
 end
