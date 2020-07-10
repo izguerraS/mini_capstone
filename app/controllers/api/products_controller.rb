@@ -3,7 +3,7 @@ class Api::ProductsController < ApplicationController
  def index
   #  @products = Product.all
   # if params[:search]
-    @products = Product.all.order(price: :desc)
+    @products = Product.all.order(price: :asc)
   # else
   #   @products = Product.all
   
