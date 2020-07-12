@@ -47,6 +47,8 @@ end
   @product.destroy
   render 'destroy.json.jb'
   end
+
+  end
 end
 
 
