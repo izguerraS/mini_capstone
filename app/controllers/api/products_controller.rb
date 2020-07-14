@@ -48,7 +48,15 @@ end
   render 'destroy.json.jb'
   end
 
+def id
+  @id = Id.new(
+  )
+  render 'show.json.jb'
   end
 end
 
 
+def supplier
+  @supplier = Supplier.all
+  render 'show.json.jb'
+ end
