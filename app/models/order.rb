@@ -3,7 +3,7 @@ class Order < ApplicationRecord
   belongs_to :product
 
   def order
-    @orders.all
+    @orders.find_by(orders: order)
   end
 
 end
